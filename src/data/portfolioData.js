@@ -31,8 +31,8 @@ export const personalInfo = {
   },
 
   ribbon: [
-    { value: "7.8 CGPA", label: "B.E in AI & ML, VTU", highlight: "Academic Record" },
-    { value: "3 Internships", label: "AI, Gen AI & Cloud", highlight: "Industry Track" },
+    { value: "7.8 CGPA", label: "B.E in AI & ML, VTU"},
+    { value: "3 Internships", label: "AI, Gen AI & Cloud"},
     { value: "5 Certifications", label: "Microsoft, Infosys, Nasscom", highlight: "Verified Skills" },
     { value: "99% Score", label: "Secondary School (10th)", highlight: "Top Performer" },
   ],
