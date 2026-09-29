@@ -12,9 +12,14 @@ import { X, Printer, Mail, Phone, MapPin, Globe, ExternalLink, Award, Graduation
 export default function ResumeModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
-  const handlePrint = () => {
-    window.print();
-  };
+const handleDownload = () => {
+  const link = document.createElement('a');
+  link.href = '/JITHIN_P_K_CV.pdf';
+  link.download = 'JITHIN_P_K_CV.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md animate-fadeIn overflow-y-auto">
@@ -32,7 +37,7 @@ export default function ResumeModal({ isOpen, onClose }) {
 
           <div className="flex items-center gap-2">
             <button
-              onClick={handlePrint}
+              onClick={handleDownload}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-medium text-white transition-colors shadow-sm"
             >
               <Printer className="w-3.5 h-3.5" />
